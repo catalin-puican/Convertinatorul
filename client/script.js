@@ -1,6 +1,6 @@
 window.API_ROOT = location.hostname === 'localhost'
     ? 'http://localhost:3000'
-    : 'https://convertinatorul-productiogitn.up.railway.app';
+    : 'https://convertinatorul-production.up.railway.app';
 
     document.getElementById('convertForm').addEventListener('submit', async (event) => {
   event.preventDefault();
