@@ -1,4 +1,8 @@
-document.getElementById('convertForm').addEventListener('submit', async (event) => {
+window.API_ROOT = location.hostname === 'localhost'
+    ? 'http://localhost:3000'
+    : 'https://api.example.com/';
+    
+    document.getElementById('convertForm').addEventListener('submit', async (event) => {
   event.preventDefault();
 
   const fileInput = document.getElementById('videoInput');
@@ -17,7 +21,7 @@ document.getElementById('convertForm').addEventListener('submit', async (event) 
     button.disabled = true;
     button.textContent = 'Converting...';
 
-    const response = await fetch('http://localhost:3000/convert', {
+    const response = await fetch(`${window.API_ROOT}/convert`, {
       method: 'POST',
       body: formData,
     });
