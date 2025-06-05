@@ -214,3 +214,75 @@ button.clicked {
     height: auto;
   }
 }
+
+/* Reset + body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.welcome {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Fullscreen video */
+.welcome video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* important pentru responsive */
+  z-index: 1;
+}
+
+/* START CONVERTING Button */
+#welcome-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#welcome-button:hover {
+  background-color: rgba(56, 142, 60, 0.9);
+}
+
+/* Optional: darker overlay for readability */
+.welcome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent */
+  z-index: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #welcome-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    bottom: 15%;
+  }
+}
