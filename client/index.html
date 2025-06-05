@@ -2,19 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Video to MP3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convertinatorul</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form id="convertForm">
-      <input
-        type="file"
-        id="videoInput"
-        name="video"
-        accept="video/*"
-        required
-      />
-      <button type="submit">Convert</button>
-    </form>
-    <script type="module" src="script.js"></script>
+    <main class="welcome">
+      <video src="img/welcome.mp4" autoplay="true" loop="true"></video>
+      <a href="convert.html" id="welcome-button">START CONVERTING</a>
+    </main>
   </body>
 </html>
